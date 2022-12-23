@@ -12,7 +12,7 @@ const UserList = () => {
     <div>
       <h1 className="fw-bold my-4 text-center">Total User: {users?.length}</h1>
 
-      {users !== "undefined" ? (
+      {users ? (
         <div>
           {users?.map((user) => (
             <div className="my-3">
