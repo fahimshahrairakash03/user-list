@@ -1,6 +1,5 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const UserDetails = () => {
@@ -21,7 +20,6 @@ const UserDetails = () => {
           <Card.Title>User Name: {user.profile.userName}</Card.Title>
           <Card.Text>Details: {user.Bio}</Card.Text>
           <Card.Text>Job Title: {user.jobTitle}</Card.Text>
-          <Button variant="primary">Go somewhere</Button>
         </Card.Body>
       </Card>
     </div>

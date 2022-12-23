@@ -5,8 +5,14 @@ import Main from "./layout/Main";
 import UserList from "./components/UserList";
 import Home from "./components/Home";
 import UserDetails from "./components/UserDetails";
+import { useState } from "react";
+import Loading from "./components/Loading";
 
 function App() {
+  const [loader, setLoader] = useState(true);
+  if (loader) {
+    <Loading></Loading>;
+  }
   const router = createBrowserRouter([
     {
       path: "/",
@@ -29,12 +35,6 @@ function App() {
       element: <UserList></UserList>,
       loader: () => fetch("https://602e7c2c4410730017c50b9d.mockapi.io/users"),
     },
-    // {
-    //   path: "/:id",
-    //   element: <UserDetails></UserDetails>,
-    //   loader: ({ params }) =>
-    //     fetch(`https://602e7c2c4410730017c50b9d.mockapi.io/users/${params.id}`),
-    // },
   ]);
 
   return (
